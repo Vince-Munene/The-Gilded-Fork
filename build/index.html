@@ -43,7 +43,7 @@
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Mains</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Desserts</a>
         </div>
-        <a href="#ourStory">Our Story</a>
+        <a href="#story">Our Story</a>
         <a href="#sigDishes">Signature Dishes</a>
         <a href="#feedback">Feedback</a>
       </div>
@@ -74,12 +74,11 @@
         </svg>
       </div>
     </header>
-    <main id="sigDishes" class="bg-palegray">
-
+    <main class="bg-palegray">
       <article id="hero" class="scroll-mt-20">
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
-            <div class="carousel-item active relative h-screen">
+            <div class="carousel-item active relative h-screen font-jaro">
               <img
                 src="/images/image1.jpg"
                 class="w-full h-full object-cover"
@@ -104,7 +103,7 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen">
+            <div class="carousel-item relative h-screen font-jaro">
               <img
                 src="/images/image2.jpg"
                 class="w-full h-full object-cover"
@@ -129,14 +128,14 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen">
+            <div class="carousel-item relative h-screen font-jaro">
               <img
                 src="/images/image3.jpg"
                 class="w-full h-full object-cover"
                 alt="Cupcakes with white whip-cream on top"
               />
               <div
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#AD5028]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+                class=" font-jaro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#AD5028]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
               >
                 <h1
                   class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
@@ -154,14 +153,14 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen">
+            <div class="carousel-item relative h-screen font-jaro">
               <img
                 src="/images/image4.jpg"
                 class="w-full h-full object-cover"
                 alt="A glass full of yoghurt decorated with some cofee on top and some mint leaves"
               />
               <div
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#5A98A2]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+                class="font-jaro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#5A98A2]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
               >
                 <h1
                   class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
@@ -201,10 +200,63 @@
         </div>
       </article>
 
-      
+      <article id="story" class="bg-[#FFFDEB] py-12 px-4 md:px-12 lg:px-20">
+        <h2 class="text-xl sm:text-2xl font-bold text-center mb-10">
+          Our Story
+        </h2>
 
-      <div class="flex flex-row flex-wrap justify-center p-6">
-        <h4 class="font-jaro text-2xl">Signature Dishes</h4>
+        <div
+          class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto min-h-[420px]"
+        >
+          <div class="w-full md:w-1/2 flex justify-center h-full">
+            <img
+              src="/images/story-img.jpg"
+              alt="Image of boiled eggs on top of a leaf plate."
+              class="w-full max-w-md h-[420px] object-cover rounded-lg shadow-md"
+            />
+          </div>
+
+          <div
+            class="w-full md:w-1/2 h-full flex items-center justify-center text-center md:text-left text-gray-800"
+          >
+            <p class="text-base sm:text-lg leading-relaxed">
+              Born from a deep love for honest ingredients and the timeless
+              culinary techniques that transform them, The Gilded Fork set out
+              to create more than just a menu; to build a tribute to the classic
+              European bistro, reimagined for the modern palate. Every dish that
+              leaves our kitchen is a chapter in that story. We believe a truly
+              great meal is a memorable experience, crafted with intention and
+              served with a genuine sense of pride, from the first bite to the
+              last.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="values"
+          class="w-[50%] grid grid-cols-3 mt-12 place-content-center h-4 mx-auto"
+        >
+          <p
+            class="py-3 px-6 text-center bg-[#BCA47F] text-white font-semibold rounded-l-lg"
+          >
+            Heritage
+          </p>
+          <p
+            class="py-3 px-6 text-center bg-[#4F5B6E] text-white font-semibold"
+          >
+            Ambiance
+          </p>
+          <p
+            class="py-3 px-6 text-center bg-[#8B9BC1] text-white font-semibold rounded-r-lg"
+          >
+            Simplicity
+          </p>
+        </div>
+      </article>
+
+
+      <div class="flex flex-row flex-wrap justify-center p-6" id="sigDishes">
+        <h4 class="font-jaro text-2xl font-bold">Signature Dishes</h4>
       </div>
       <div class="flex flex-wrap flex-row justify-between px-14 py-8 gap-8">
         <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
@@ -317,7 +369,7 @@
           </p>
         </div>
       </div>
-    </main>
+
     <div id="feedback" class="bg-paleyellow">
       <div class="text-center p-8">
         <h4 class="font-jaro text-2xl my-2">Share Your Experience</h4>
@@ -372,6 +424,9 @@
         </button>
       </div>
     </div>
+    </main>
+
+    <article id="footer"></article>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
