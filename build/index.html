@@ -15,13 +15,13 @@
     <div class="flex flex-row gap-8 pt-4 font-jaro text-xl">
       <a href="#">Home</a>
       <a href="#" onclick="toggleDropdown()">Menu<ion-icon name=chevron-down-outline></ion-icon> </a>
-       <div id="dropdown" class="absolute mt-2 w-40 bg-white border rounded-md shadow-md hidden">
+       <div id="dropdown" class="absolute mt-4 w-40 bg-white border rounded-md shadow-md hidden">
           <a href="#" onclick="openFullscreenMenu()" class="block px-4 py-2 bg-paleyellow">Starters</a>
           <a href="#" onclick="openFullscreenMenu()" class="block px-4 py-2 bg-paleyellow">Main Dishes</a>
           <a href="#" onclick="openFullscreenMenu()" class="block px-4 py-2 bg-paleyellow">Drinks</a>
           <a href="#" onclick="openFullscreenMenu()" class="block px-4 py-2 bg-paleyellow">Desserts</a>
         </div>
-        <div id="fullscreen-menu" class="fixed inset-0 bg-paleyellow z-50 hidden flex flex-col overflow-y-auto">
+        <div id="fullscreen-menu" class="fixed inset-0 bg-paleyellow z-50 hidden overflow-y-auto">
           <div><h4 class="flex flex-wrap justify-center p-6">Menu</h4>
         <button onclick="closeFullscreenMenu()" class="absolute top-4 right-6 text-2xl">&times;</button></div>
           <h4 class="font-jaro text-2xl px-14">Starters</h4>
