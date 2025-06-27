@@ -1,123 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/build/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inder&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-  <title>The Gilded Fork</title>
-</head>
-<body>
-  <header class="flex flex-row justify-between py-4 px-8 bg-paleyellow">
-    <div class="image-div">
-      <img src="/images/gilded-fork-logo.jpg" alt="The Gilded Fork Logo" class="h-12 rounded-2xl" >
-    </div>
-    <div class="flex flex-row gap-4 pt-4 font-jaro text-xl">
-      <a>Home</a>
-      <a onclick="toggleDropdown()">Menu <ion-icon name=chevron-down-outline></ion-icon> </a>
-       <div id="dropdown" class="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg hidden z-10">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/build/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inder&family=Jaro:opsz@6..72&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Gilded Fork</title>
+  </head>
+  <body>
+    <header class="flex flex-row justify-between py-4 px-8 bg-paleyellow">
+      <div class="image-div">
+        <img
+          src="/images/gilded-fork-logo.jpg"
+          alt="The Gilded Fork Logo"
+          class="h-12 rounded-2xl"
+        />
+      </div>
+      <div class="flex flex-row gap-4 pt-4 font-jaro text-xl">
+        <a href="#hero">Home</a>
+        <a onclick="toggleDropdown()"
+          >Menu <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
+        <div
+          id="dropdown"
+          class="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg hidden z-10"
+        >
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Starters</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Mains</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Desserts</a>
         </div>
-      <a href="#ourStory">Our Story</a>
-      <a href="#sigDishes">Signature Dishes</a>
-      <a href="#feedback">Feedback</a>
+        <a href="#ourStory">Our Story</a>
+        <a href="#sigDishes">Signature Dishes</a>
+        <a href="#feedback">Feedback</a>
+      </div>
+      <div class="pt-4">
+        <svg
+          width="35"
+          height="35"
+          viewBox="0 0 70 70"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M44.3915 17.5875L51.7707 11.9292L42.4665 11.6667L39.3748 2.91667L36.2832 11.6667L26.979 11.9292L34.3582 17.5875L31.704 26.5125L39.3748 21.2333L47.0457 26.5125L44.3915 17.5875Z"
+            fill="black"
+          />
+          <path
+            d="M57.1958 35.7292L61.9792 32.0833L55.9708 31.9375L53.9583 26.25L51.9458 31.9375L45.9375 32.0833L50.7208 35.7292L49 41.5042L53.9583 38.0917L58.9167 41.5042L57.1958 35.7292Z"
+            fill="black"
+          />
+          <path
+            d="M20.4167 17.5C20.4167 35.2333 34.7667 49.5833 52.5 49.5833C54.0458 49.5833 55.5625 49.4667 57.05 49.2625C52.3542 56.4667 44.2458 61.25 35 61.25C20.5042 61.25 8.75 49.4958 8.75 35C8.75 25.7542 13.5333 17.6458 20.7375 12.95C20.5333 14.4375 20.4167 15.9542 20.4167 17.5Z"
+            fill="black"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </header>
+    <main id="sigDishes" class="bg-palegray">
+
+      <article id="hero" class="scroll-mt-20">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active relative h-screen">
+              <img
+                src="/images/image1.jpg"
+                class="w-full h-full object-cover"
+                alt="image of a bread sandwich with cherries and banana pieces"
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#1E2933]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+              >
+                <h1
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
+                >
+                  The Gilded<br />Fork
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg font-semibold mb-6">
+                  Where Culinary Art Meets Timeless Tradition
+                </p>
+                <button
+                  class="bg-[#425D7C] text-[#DACFAE] font-semibold px-4 py-1 rounded-md shadow-md hover:bg-[#5c78a2] transition w-auto"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <div class="carousel-item relative h-screen">
+              <img
+                src="/images/image2.jpg"
+                class="w-full h-full object-cover"
+                alt="Different plates of foods on a photo"
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#B26D1A]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+              >
+                <h1
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
+                >
+                  The Gilded<br />Fork
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg font-semibold mb-6">
+                  Where Culinary Art Meets Timeless Tradition
+                </p>
+                <button
+                  class="bg-[#3B1701] text-[#C98576] font-semibold px-4 py-1 rounded-md shadow-md hover:bg-[#5c78a2] transition w-auto"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <div class="carousel-item relative h-screen">
+              <img
+                src="/images/image3.jpg"
+                class="w-full h-full object-cover"
+                alt="Cupcakes with white whip-cream on top"
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#AD5028]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+              >
+                <h1
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
+                >
+                  The Gilded<br />Fork
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg font-semibold mb-6">
+                  Where Culinary Art Meets Timeless Tradition
+                </p>
+                <button
+                  class="bg-[#5D4061] text-[#FD88B7] font-semibold px-4 py-1 rounded-md shadow-md hover:bg-[#5c78a2] transition w-auto"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+
+            <div class="carousel-item relative h-screen">
+              <img
+                src="/images/image4.jpg"
+                class="w-full h-full object-cover"
+                alt="A glass full of yoghurt decorated with some cofee on top and some mint leaves"
+              />
+              <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#5A98A2]/80 rounded-2xl text-white text-center px-6 sm:px-8 md:px-10 py-6 sm:py-8 md:py-10 max-w-md w-[90%] shadow-lg"
+              >
+                <h1
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold font-[cursive] mb-2 leading-tight"
+                >
+                  The Gilded<br />Fork
+                </h1>
+                <p class="text-sm sm:text-base md:text-lg font-semibold mb-6">
+                  Where Culinary Art Meets Timeless Tradition
+                </p>
+                <button
+                  class="bg-[#E3DBC8] text-[#1C272D] font-semibold px-4 py-1 rounded-md shadow-md hover:bg-[#5c78a2] transition w-auto"
+                >
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </article>
+
+      
+
+      <div class="flex flex-row flex-wrap justify-center p-6">
+        <h4 class="font-jaro text-2xl">Signature Dishes</h4>
+      </div>
+      <div class="flex flex-wrap flex-row justify-between px-14 py-8 gap-8">
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/pan-seared-duck-confit.jpg"
+            alt="Pan Seared Duck Confit"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Pan Seared Duck Confit</h4>
+          <p class="font-inder">
+            Slow-cooked to tender perfection and served over a bed of creamy
+            polenta with a rich cherry and red wine reduction.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/mushroom-truffle-risotto.jpg"
+            alt="Mushroom & Truffle Risotto"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Mushroom & Truffle Risotto</h4>
+          <p class="font-inder">
+            A rich and creamy Arborio risotto with wild mushrooms, black truffle
+            shavings, and aged Parmesan cheese.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/gilded-fork-steak-fries.jpg"
+            alt="The Gilded Fork Steak Fries"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">The Gilded Fork Steak Fries</h4>
+          <p class="font-inder">
+            A perfectly grilled 8oz filet mignon, topped with a savory herb
+            compound butter and served with a side of crisp, golden fries.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/deconstructed-lemon-tart.jpg"
+            alt="Deconstructed Lemon Tart"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Deconstructed Lemon Tart</h4>
+          <p class="font-inder">
+            A vibrant lemon curd served alongside buttery shortbread crumbles,
+            toasted meringue kisses, and a touch of fresh raspberry coulis.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/molten-lava-cake.jpg"
+            alt="Molten Chocolate Lava Cake"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Molten Chocolate Lava Cake</h4>
+          <p class="font-inder">
+            A rich, dark chocolate cake with a warm, gooey center, served with a
+            scoop of vanilla bean ice cream and a dusting of cocoa powder.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/salted-caramel-budino.jpg"
+            alt="Salted Caramel Budino"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Salted Caramel Budino</h4>
+          <p class="font-inder">
+            A silky, Italian-style pudding with layers of rich caramel, topped
+            with a sprinkle of sea salt and a delicate dollop of whipped cream.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/the-gilded-spritz.jpg"
+            alt="The Gilded Spritz"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">The Gilded Spritz</h4>
+          <p class="font-inder">
+            A refreshing blend of Aperol, prosecco, and a hint of elderflower
+            liqueur, garnished with a fresh orange twist
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/the-smoked-rosemary.jpg"
+            alt="Smoked Rosemary Old Fashioned"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Smoked Rosemary Old Fashioned</h4>
+          <p class="font-inder">
+            A classic Old Fashioned made with small-batch bourbon, aromatic
+            bitters, and served over a single large ice cube with a smoked
+            rosemary sprig.
+          </p>
+        </div>
+        <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
+          <img
+            src="/images/lavender-haze.jpg"
+            alt="Lavender Haze"
+            class="rounded-2xl w-60 h-44"
+          />
+          <h4 class="font-jaro text-2xl">Lavender Haze</h4>
+          <p class="font-inder">
+            A beautifully layered cocktail featuring Empress 1908 Gin, fresh
+            lemon juice, and a house-made lavender honey syrup.
+          </p>
+        </div>
+      </div>
+    </main>
+    <div id="feedback" class="bg-paleyellow">
+      <div class="text-center p-8">
+        <h4 class="font-jaro text-2xl my-2">Share Your Experience</h4>
+        <p class="font-inder">We value your feedback and read every message</p>
+      </div>
+      <div class="p-8">
+        <form class="flex flex-col max-w-96 gap-3 m-auto font-bold">
+          <input
+            class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium"
+            type="text"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium"
+            type="tel"
+            placeholder="Phone Number(eg. 0712-345-678)"
+            pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
+            required
+          />
+          <textarea
+            class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium placeholder:text-center max-h-40 resize-none"
+            placeholder="Message Us"
+          ></textarea>
+          <button
+            class="rounded-md bg-palegray py-2.5 px-16 self-center font-medium"
+          >
+            Submit Feedback
+          </button>
+        </form>
+      </div>
+      <div class="fixed z-50 right-8 bottom-8">
+        <button class="bg-paleyellow p-4 rounded-[50%]">
+          <svg
+            width="48"
+            height="46"
+            viewBox="0 0 50 47"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M39.6469 0.300659C42.2365 0.300659 44.72 1.32938 46.5512 3.16052C48.3823 4.99165 49.411 7.47521 49.411 10.0648V29.5932C49.411 32.1828 48.3823 34.6663 46.5512 36.4975C44.72 38.3286 42.2365 39.3573 39.6469 39.3573H28.1154L16.4911 46.3314C16.1411 46.5415 15.7439 46.6604 15.336 46.6773C14.928 46.6942 14.5224 46.6085 14.1562 46.428C13.7899 46.2476 13.4748 45.9781 13.2396 45.6444C13.0045 45.3107 12.8568 44.9233 12.81 44.5177L12.7954 44.2394V39.3573H10.3543C7.84925 39.3573 5.43997 38.3945 3.62485 36.668C1.80974 34.9415 0.72764 32.5833 0.602385 30.0814L0.590179 29.5932V10.0648C0.590179 7.47521 1.6189 4.99165 3.45004 3.16052C5.28118 1.32938 7.76473 0.300659 10.3543 0.300659H39.6469ZM32.8119 22.9682C32.3497 22.5151 31.7263 22.2641 31.079 22.2705C30.4318 22.2769 29.8135 22.5402 29.3603 23.0023C28.7921 23.5825 28.1138 24.0434 27.3652 24.358C26.6165 24.6727 25.8127 24.8347 25.0006 24.8347C24.1885 24.8347 23.3847 24.6727 22.636 24.358C21.8874 24.0434 21.2091 23.5825 20.6409 23.0023C20.1854 22.5508 19.5705 22.2967 18.9291 22.2949C18.2878 22.2932 17.6715 22.5439 17.2135 22.9929C16.7555 23.4419 16.4926 24.0531 16.4817 24.6944C16.4708 25.3356 16.7127 25.9555 17.1551 26.4198C18.1778 27.4634 19.3985 28.2925 20.7457 28.8586C22.0928 29.4246 23.5394 29.7161 25.0006 29.7161C26.4618 29.7161 27.9084 29.4246 29.2555 28.8586C30.6027 28.2925 31.8234 27.4634 32.8461 26.4198C33.2992 25.9575 33.5502 25.3342 33.5438 24.6869C33.5374 24.0396 33.2741 23.4214 32.8119 22.9682ZM18.9224 12.5059H18.898C18.2506 12.5059 17.6297 12.7631 17.1719 13.2208C16.7141 13.6786 16.457 14.2995 16.457 14.9469C16.457 15.5943 16.7141 16.2152 17.1719 16.673C17.6297 17.1308 18.2506 17.388 18.898 17.388H18.9224C19.5698 17.388 20.1907 17.1308 20.6485 16.673C21.1063 16.2152 21.3634 15.5943 21.3634 14.9469C21.3634 14.2995 21.1063 13.6786 20.6485 13.2208C20.1907 12.7631 19.5698 12.5059 18.9224 12.5059ZM31.1276 12.5059H31.1032C30.4558 12.5059 29.8349 12.7631 29.3771 13.2208C28.9193 13.6786 28.6622 14.2995 28.6622 14.9469C28.6622 15.5943 28.9193 16.2152 29.3771 16.673C29.8349 17.1308 30.4558 17.388 31.1032 17.388H31.1276C31.775 17.388 32.3959 17.1308 32.8537 16.673C33.3115 16.2152 33.5687 15.5943 33.5687 14.9469C33.5687 14.2995 33.3115 13.6786 32.8537 13.2208C32.3959 12.7631 31.775 12.5059 31.1276 12.5059Z"
+              fill="#312323"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="pt-4">
-      <svg width="35" height="35" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M44.3915 17.5875L51.7707 11.9292L42.4665 11.6667L39.3748 2.91667L36.2832 11.6667L26.979 11.9292L34.3582 17.5875L31.704 26.5125L39.3748 21.2333L47.0457 26.5125L44.3915 17.5875Z" fill="black"/>
-        <path d="M57.1958 35.7292L61.9792 32.0833L55.9708 31.9375L53.9583 26.25L51.9458 31.9375L45.9375 32.0833L50.7208 35.7292L49 41.5042L53.9583 38.0917L58.9167 41.5042L57.1958 35.7292Z" fill="black"/>
-        <path d="M20.4167 17.5C20.4167 35.2333 34.7667 49.5833 52.5 49.5833C54.0458 49.5833 55.5625 49.4667 57.05 49.2625C52.3542 56.4667 44.2458 61.25 35 61.25C20.5042 61.25 8.75 49.4958 8.75 35C8.75 25.7542 13.5333 17.6458 20.7375 12.95C20.5333 14.4375 20.4167 15.9542 20.4167 17.5Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-  </header>
-  <main id="sigDishes" class="bg-palegray">
-    <div class=" flex flex-row flex-wrap justify-center p-6">
-      <h4 class="font-jaro text-2xl">Signature Dishes</h4>
-    </div>
-    <div class="flex flex-wrap flex-row justify-between px-14 py-8 gap-8">
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl">
-        <img src="/images/pan-seared-duck-confit.jpg" alt="Pan Seared Duck Confit" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Pan Seared Duck Confit</h4>
-        <p class="font-inder">Slow-cooked to tender perfection and served over a bed of 
-          creamy polenta with a rich cherry and red wine reduction.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl">
-        <img src="/images/mushroom-truffle-risotto.jpg" alt="Mushroom & Truffle Risotto" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Mushroom & Truffle Risotto</h4>
-        <p class="font-inder">A rich and creamy Arborio risotto with wild mushrooms,
-          black truffle shavings, and aged Parmesan cheese.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/gilded-fork-steak-fries.jpg" alt="The Gilded Fork Steak Fries" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">The Gilded Fork Steak Fries</h4>
-        <p class="font-inder">A perfectly grilled 8oz filet mignon, topped with a savory herb
-          compound butter and served with a side of crisp, golden fries.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/deconstructed-lemon-tart.jpg" alt="Deconstructed Lemon Tart" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Deconstructed Lemon Tart</h4>
-        <p class="font-inder">A vibrant lemon curd served alongside buttery shortbread crumbles,
-          toasted meringue kisses, and a touch of fresh raspberry coulis.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/molten-lava-cake.jpg" alt="Molten Chocolate Lava Cake" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Molten Chocolate Lava Cake</h4>
-        <p class="font-inder">A rich, dark chocolate cake with a warm, gooey center,
-          served with a scoop of vanilla bean ice cream and a dusting of cocoa powder.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/salted-caramel-budino.jpg" alt="Salted Caramel Budino" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Salted Caramel Budino</h4>
-        <p class="font-inder">A silky, Italian-style pudding with layers of rich caramel,
-          topped with a sprinkle of sea salt and a delicate dollop of whipped cream.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/the-gilded-spritz.jpg" alt="The Gilded Spritz" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">The Gilded Spritz</h4>
-        <p class="font-inder">A refreshing blend of Aperol, prosecco, and a hint of
-          elderflower liqueur, garnished with a fresh orange twist</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/the-smoked-rosemary.jpg" alt="Smoked Rosemary Old Fashioned" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Smoked Rosemary Old Fashioned</h4>
-        <p class="font-inder">A classic Old Fashioned made with small-batch bourbon, aromatic bitters,
-          and served over a single large ice cube with a smoked rosemary sprig.</p>
-      </div>
-      <div class="text-center p-5 max-w-72 bg-white p-6 rounded-2xl ">
-        <img src="/images/lavender-haze.jpg" alt="Lavender Haze" class="rounded-2xl w-60 h-44">
-        <h4 class="font-jaro text-2xl">Lavender Haze</h4>
-        <p class="font-inder">A beautifully layered cocktail featuring Empress 1908 Gin,
-          fresh lemon juice, and a house-made lavender honey syrup.</p>
-      </div>
-    </div>
-  </main>
-  <div id="feedback" class="bg-paleyellow ">
-    <div class="text-center p-8">
-      <h4 class="font-jaro text-2xl my-2">Share Your Experience</h4>
-      <p class="font-inder">We value your feedback and read every message</p>
-    </div>
-    <div class="p-8">
-      <form class="flex flex-col max-w-96 gap-3 m-auto font-bold ">
-        <input class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium" type="text" placeholder="Name" required>
-        <input class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium" type="email" placeholder="Email" required>
-        <input class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium" type="tel" placeholder="Phone Number(eg. 0712-345-678)"
-        pattern="[0-9]{4} [0-9]{3} [0-9]{3}" 
-        required>
-        <textarea class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium placeholder:text-center max-h-40 resize-none" placeholder="Message Us"></textarea>
-        <button class="rounded-md bg-palegray py-2.5 px-16 self-center font-medium">Submit Feedback</button>
-    </form>
-    </div>
-    <div class="fixed z-50 right-8 bottom-8 ">
-    <button class="bg-paleyellow p-4 rounded-[50%]">
-      <svg width="48" height="46" viewBox="0 0 50 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M39.6469 0.300659C42.2365 0.300659 44.72 1.32938 46.5512 3.16052C48.3823 4.99165 49.411 7.47521 49.411 10.0648V29.5932C49.411 32.1828 48.3823 34.6663 46.5512 36.4975C44.72 38.3286 42.2365 39.3573 39.6469 39.3573H28.1154L16.4911 46.3314C16.1411 46.5415 15.7439 46.6604 15.336 46.6773C14.928 46.6942 14.5224 46.6085 14.1562 46.428C13.7899 46.2476 13.4748 45.9781 13.2396 45.6444C13.0045 45.3107 12.8568 44.9233 12.81 44.5177L12.7954 44.2394V39.3573H10.3543C7.84925 39.3573 5.43997 38.3945 3.62485 36.668C1.80974 34.9415 0.72764 32.5833 0.602385 30.0814L0.590179 29.5932V10.0648C0.590179 7.47521 1.6189 4.99165 3.45004 3.16052C5.28118 1.32938 7.76473 0.300659 10.3543 0.300659H39.6469ZM32.8119 22.9682C32.3497 22.5151 31.7263 22.2641 31.079 22.2705C30.4318 22.2769 29.8135 22.5402 29.3603 23.0023C28.7921 23.5825 28.1138 24.0434 27.3652 24.358C26.6165 24.6727 25.8127 24.8347 25.0006 24.8347C24.1885 24.8347 23.3847 24.6727 22.636 24.358C21.8874 24.0434 21.2091 23.5825 20.6409 23.0023C20.1854 22.5508 19.5705 22.2967 18.9291 22.2949C18.2878 22.2932 17.6715 22.5439 17.2135 22.9929C16.7555 23.4419 16.4926 24.0531 16.4817 24.6944C16.4708 25.3356 16.7127 25.9555 17.1551 26.4198C18.1778 27.4634 19.3985 28.2925 20.7457 28.8586C22.0928 29.4246 23.5394 29.7161 25.0006 29.7161C26.4618 29.7161 27.9084 29.4246 29.2555 28.8586C30.6027 28.2925 31.8234 27.4634 32.8461 26.4198C33.2992 25.9575 33.5502 25.3342 33.5438 24.6869C33.5374 24.0396 33.2741 23.4214 32.8119 22.9682ZM18.9224 12.5059H18.898C18.2506 12.5059 17.6297 12.7631 17.1719 13.2208C16.7141 13.6786 16.457 14.2995 16.457 14.9469C16.457 15.5943 16.7141 16.2152 17.1719 16.673C17.6297 17.1308 18.2506 17.388 18.898 17.388H18.9224C19.5698 17.388 20.1907 17.1308 20.6485 16.673C21.1063 16.2152 21.3634 15.5943 21.3634 14.9469C21.3634 14.2995 21.1063 13.6786 20.6485 13.2208C20.1907 12.7631 19.5698 12.5059 18.9224 12.5059ZM31.1276 12.5059H31.1032C30.4558 12.5059 29.8349 12.7631 29.3771 13.2208C28.9193 13.6786 28.6622 14.2995 28.6622 14.9469C28.6622 15.5943 28.9193 16.2152 29.3771 16.673C29.8349 17.1308 30.4558 17.388 31.1032 17.388H31.1276C31.775 17.388 32.3959 17.1308 32.8537 16.673C33.3115 16.2152 33.5687 15.5943 33.5687 14.9469C33.5687 14.2995 33.3115 13.6786 32.8537 13.2208C32.3959 12.7631 31.775 12.5059 31.1276 12.5059Z" fill="#312323"/>
-      </svg>
-    </button>
-    </div>
-  </div>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
