@@ -22,7 +22,9 @@
     <title>The Gilded Fork</title>
   </head>
   <body class="bg-paleyellow text-black dark:bg-[#1C1C1C] dark:text-white">
-    <header class="flex flex-row justify-between py-4 px-8 bg-paleyellow dark:bg-[#2D2D2D]">
+    <header
+      class="flex flex-row justify-between py-4 px-8 bg-paleyellow dark:bg-[#2D2D2D]"
+    >
       <div class="image-div">
         <img
           src="/images/gilded-fork-logo.jpg"
@@ -108,7 +110,9 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]">
+            <div
+              class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]"
+            >
               <img
                 src="/images/image2.jpg"
                 class="w-full h-full object-cover"
@@ -133,7 +137,9 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]">
+            <div
+              class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]"
+            >
               <img
                 src="/images/image3.jpg"
                 class="w-full h-full object-cover"
@@ -158,7 +164,9 @@
               </div>
             </div>
 
-            <div class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]">
+            <div
+              class="carousel-item relative h-screen font-jaro dark-bg-[#412F32]"
+            >
               <img
                 src="/images/image4.jpg"
                 class="w-full h-full object-cover"
@@ -205,7 +213,10 @@
         </div>
       </article>
 
-      <article id="story" class="bg-[#FFFDEB] dark:bg-[#2A2A2A] py-12 px-4 md:px-12 lg:px-20">
+      <article
+        id="story"
+        class="bg-[#FFFDEB] dark:bg-[#2A2A2A] py-12 px-4 md:px-12 lg:px-20"
+      >
         <h2 class="text-xl sm:text-2xl font-bold text-center mb-10">
           Our Story
         </h2>
@@ -259,10 +270,10 @@
         </div>
       </article>
 
-      <div class="flex flex-row flex-wrap justify-center p-6" id="sigDishes">
+      <div class="flex flex-row flex-wrap justify-center p-6 dark:bg-[#2c2828]" id="sigDishes ">
         <h4 class="font-jaro text-2xl font-bold">Signature Dishes</h4>
       </div>
-      <div class="flex flex-wrap flex-row justify-between px-14 py-8 gap-8">
+      <div class="flex flex-wrap flex-row justify-between px-14 py-8 gap-8 dark:bg-[#2c2828]">
         <div class="text-center max-w-72 bg-white p-6 rounded-2xl">
           <img
             src="/images/pan-seared-duck-confit.jpg"
@@ -382,11 +393,11 @@
           </p>
         </div>
         <div class="p-8">
-          <form class="flex flex-col max-w-96 gap-3 m-auto font-bold ">
+          <form class="flex flex-col max-w-96 gap-3 m-auto font-bold">
             <input
-              class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium  placeholder:dark:text-white dark:bg-[#2A2A2A] dark:text-white"
+              class="rounded-md bg-palegray p-2.5 placeholder:text-black text-center placeholder:font-medium placeholder:dark:text-white dark:bg-[#2A2A2A] dark:text-white"
               type="text"
-              placeholder="Name" 
+              placeholder="Name"
               required
             />
             <input
@@ -403,10 +414,12 @@
               required
             />
             <textarea
-              class="rounded-md bg-palegray p-2.5 placeholder:text-center  placeholder:text-black text-center placeholder:font-medium placeholder:dark:text-white dark:bg-[#2A2A2A] dark:text-white max-h-40 resize-none"
+              class="rounded-md bg-palegray p-2.5 placeholder:text-center placeholder:text-black text-center placeholder:font-medium placeholder:dark:text-white dark:bg-[#2A2A2A] dark:text-white max-h-40 resize-none"
               placeholder="Message Us"
             ></textarea>
             <button
+              type="submit"
+              id="submitFeedback"
               class="rounded-md bg-palegray py-2.5 px-16 self-center font-medium"
             >
               Submit Feedback
@@ -414,7 +427,7 @@
           </form>
         </div>
         <div class="fixed z-50 right-8 bottom-8">
-          <button class="bg-paleyellow dark:bg-white p-4 rounded-[50%]">
+          <button class="bg-blue-300 dark:bg-white p-4 rounded-[50%]">
             <svg
               width="48"
               height="46"
@@ -432,7 +445,149 @@
       </div>
     </main>
 
-    <article id="footer" class="dark:bg-[#1A1A1A]"></article>
+    <article id="footer">
+      <footer
+        class="bg-[#FFFDEB] py-12 px-4 sm:px-8 md:px-12 lg:px-20 text-gray-800 dark:bg-[#4d4545] dark:text-white"
+      >
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <div
+            class="flex flex-col items-center md:items-start text-center md:text-left font-jaro"
+          >
+            <img
+              src="/images/gilded-fork-logo.jpg"
+              alt="The Gilded Fork Logo"
+              class="h-12 rounded-2xl flex flex-row justify-center items-center"
+            />
+            <h3 class="text-2xl font-cursive font-bold text-gray-900 mb-1">
+              The Gilded Fork
+            </h3>
+            <p class="text-sm text-gray-600 mb-6">
+              Where Culinary Art Meets Timeless Tradition
+            </p>
+
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition"
+              >
+                <img
+                  src="/images/instagram.png"
+                  alt="Instagram Icon"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a
+                href="#"
+                aria-label="X (Twitter)"
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition"
+              >
+                <img
+                  src="/images/twitter.png"
+                  alt="X (Twitter) Icon"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a
+                href="#"
+                aria-label="Gmail"
+                class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition"
+              >
+                <img
+                  src="/images/gmail.png"
+                  alt="Gmail Icon"
+                  class="w-6 h-6"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-8 md:mt-0 text-center md:text-left">
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#hero"
+                  class="text-gray-600 hover:text-amber-700 transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  class="text-gray-600 hover:text-amber-700 transition"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#story"
+                  class="text-gray-600 hover:text-amber-700 transition"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#sigDishes"
+                  class="text-gray-600 hover:text-amber-700 transition"
+                  >Signature Dishes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#feedback"
+                  class="text-gray-600 hover:text-amber-700 transition"
+                  >Feedback</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 lg:mt-0 text-center md:text-left">
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Contact</h4>
+            <p class="text-gray-600 mb-2">Reach us at:</p>
+            <p class="text-lg font-medium text-gray-800 mb-2">+251234567890</p>
+            <p class="text-gray-600 mb-2">Or email us at:</p>
+            <p class="text-lg font-medium text-gray-800 mb-6">
+              gildedfork@gmail.com
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Hours</h4>
+            <ul class="space-y-1 text-gray-600">
+              <li>Monday - Friday: 9:00 AM - 10:00 PM</li>
+              <li>Saturday - Sunday: 10:00 AM - 11:00 PM</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 lg:mt-0 flex flex-col items-center md:items-start">
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Find Us</h4>
+            <div
+              class="w-full max-w-xs h-48 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center text-gray-500"
+            >
+              <iframe
+                class="embed-map-frame w-full h-full object-cover"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Restaurant%20&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-600"
+        >
+          <p>&copy; 2024 The Gilded Fork. All rights reserved.</p>
+        </div>
+      </footer>
+    </article>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
